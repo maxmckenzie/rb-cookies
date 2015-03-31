@@ -38,6 +38,8 @@ you can run the script to give you back every cookie but remove duplicates by un
 
 `
  # Remove Duplicates
+`
+`
  #c = a.flatten.uniq
 `
 
@@ -45,6 +47,8 @@ and commenting out this line
 
 `
  # Remove all Duplicates based on the name of the cookie.
+`
+`
  c = a.flatten.uniq! { |a| a[:name] }
 `
 
@@ -54,6 +58,8 @@ if you want you can uncomment these lines
 
 `
  #count += 1
+`
+`
  #break if count == 10
 `
 
