@@ -6,6 +6,13 @@ browser = Watir::Browser.new(:chrome)
 
 a = []
 
+browser.goto "https://www.yorusite.com/login"
+browser.text_field(:name => 'username').set 'test_account_email'
+browser.text_field(:name => 'password').set 'test_account_password'
+browser.button(:id => 'login').click
+
+browser.div(:id => 'object-on-login-success-page').wait_until_present
+
 count = 0
 
 CSV.foreach("siteurls.csv") do |row|
