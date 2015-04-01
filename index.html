@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cookie Results</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	
+	<script>
+		$.getJSON("cookies.json", function( json ){
+			data = json.out
+			$.each(data, function(key, val) {
+				var tr=$('<tr></tr>');
+				$.each(val, function(k, v){
+					$('<td>'+v+'</td>').appendTo(tr);
+				});
+				tr.appendTo('#display');
+			});
+		});
+	</script>
+
+	<style>
+		body {
+			font-family: verdana,arial,sans-serif;
+			font-size:11px;
+		}
+		table {
+			color:#333333;
+			border-width: 1px;
+			border-color: #666666;
+			border-collapse: collapse;
+		}
+		table th {
+			border-width: 1px;
+			padding: 8px;
+			border-style: solid;
+			border-color: #666666;
+			background-color: #dedede;
+		}
+		table td {
+			border-width: 1px;
+			padding: 8px;
+			border-style: solid;
+			word-wrap:break-word;
+			max-width: 20em;
+			border-color: #666666;
+			background-color: #ffffff;
+		}
+	</style>
+
+</head>
+<body>
+<h1>Cookie results</h1>
+<table id="display"></table>
+</body>
+</html>
