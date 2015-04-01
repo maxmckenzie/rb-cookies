@@ -45,8 +45,6 @@ Then sit back and watch that sexy sexy automated browser do its thing.
 
 It will output all the results to a file named cookies.json
 
-#### Aditional Options.
-
 you can run the script to give you back every cookie but remove duplicates by uncommenting these line
 
 `
