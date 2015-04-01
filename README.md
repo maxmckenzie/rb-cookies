@@ -7,7 +7,7 @@ This script allows one to scrape a list of URLs and get back a json file of all 
 
 ## How to Use
 
-### Get you'r dependances together.
+### Get your dependencies together.
 
 You need to have ruby installed https://www.ruby-lang.org/en/documentation/installation/
 
