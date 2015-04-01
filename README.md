@@ -24,6 +24,19 @@ Add all the URLs you want to parse as a csv file in siteurls.csv
 
 Use terminal to `cd` into the rb-cookies directory
 
+If your site requieres a login to access some pages you can amend the below code located in urlrunner.rb with the your details.
+
+```
+browser.goto "https://www.yorusite.com/login"
+browser.text_field(:name => 'username').set 'test_account_email'
+browser.text_field(:name => 'password').set 'test_account_password'
+browser.button(:id => 'login').click
+
+browser.div(:id => 'object-on-login-success-page').wait_until_present
+```
+
+Otherwise you can comment out these lines with a `#` at the beginning of the line.
+
 then run
 
 `ruby urlrunner.rb`
