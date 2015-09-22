@@ -5,6 +5,8 @@ scrape a website for all the cookies used. Useful when someone asks you to audit
 
 This script allows one to scrape a list of URLs and get back a json file of all the cookies that are present on those URLs.
 
+> tip: if your on a site map page and the links there are all you need then slam this in to a console `var urls = []; $('a').each(function(){ urls.push($(this).attr("href")); }); console.log(urls) `
+
 ## How to Use
 
 ### Get your dependencies together.
